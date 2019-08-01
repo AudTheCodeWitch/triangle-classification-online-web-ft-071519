@@ -8,19 +8,6 @@ class Triangle
     
   end
   
-  def get_married(person)
-    self.partner = person
-    if person.class != Person
-      begin
-        raise PartnerError
-      rescue PartnerError => error
-          puts error.message
-      end
-    else
-      person.partner = self
-    end
-  end
-  
   def kind
     if side_a == 0 && side_b == 0 && side_c == 0 
       begin
