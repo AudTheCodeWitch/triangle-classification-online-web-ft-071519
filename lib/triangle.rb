@@ -28,11 +28,11 @@ class Triangle
       elsif side_a != side_b && side_a != side_c && side_b != side_c
         :scalene
       else
-        begin
+        #begin
           raise TriangleError
-        rescue TriangleError => error
-          puts error.message
-        end
+        #rescue TriangleError => error
+         # puts error.message
+        #end
       end
     end
     
