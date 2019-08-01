@@ -14,7 +14,7 @@ class Triangle
       begin
         raise TriangleError
       rescue TriangleError => error
-        puts error.message
+        error.message
       end
     else
       if side_a == side_b && side_b == side_c
