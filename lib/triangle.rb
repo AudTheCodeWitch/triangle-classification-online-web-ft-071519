@@ -10,7 +10,7 @@ class Triangle
   end
   
   def kind
-    if side_a <= 0 || side_b <= 0 || side_c <= 0 
+    if (side_a <= 0 || side_b <= 0 || side_c <= 0) || (side_a + side_b < side_c || side_a + side_c < side_b || side_b + side_c < side_a)
       # begin
         raise TriangleError
       # rescue TriangleError => error
@@ -27,12 +27,6 @@ class Triangle
         :isosceles
       elsif side_a != side_b && side_a != side_c && side_b != side_c
         :scalene
-      elsif side_a + side_b < side_c || side_a + side_c < side_b || side_b + side_c < side_a 
-        #begin
-          raise TriangleError
-        #rescue TriangleError => error
-         # puts error.message
-        #end
       end
     end
     
