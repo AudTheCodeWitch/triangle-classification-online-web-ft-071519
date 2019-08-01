@@ -1,3 +1,4 @@
+require 'pry'
 class Triangle
   attr_reader :equilateral, :isosceles, :scalene, :side_a, :side_b, :side_c
   
@@ -10,6 +11,7 @@ class Triangle
   
   def kind
     if side_a == 0 || side_b == 0 || side_c == 0 
+      binding.pry
       begin
         raise TriangleError
       rescue TriangleError => error
