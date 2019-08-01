@@ -39,6 +39,7 @@ class Triangle
   end
   
   class TriangleError < StandardError
+    binding.pry
     def message
       "Not a triangle!"
     end
