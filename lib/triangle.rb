@@ -27,7 +27,7 @@ class Triangle
         :isosceles
       elsif side_a != side_b && side_a != side_c && side_b != side_c
         :scalene
-      else
+      elsif side_a + side_b < side_c || side_a + side_c < side_b || side_b + side_c < side_a 
         #begin
           raise TriangleError
         #rescue TriangleError => error
